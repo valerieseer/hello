@@ -1,6 +1,7 @@
 body {
   margin: 0;
   font-family: 'Helvetica', sans-serif;
+  color: #868686;
 }
 .container {
   width: 73%;
@@ -57,4 +58,10 @@ h2 {
 }
 p {
   margin-bottom: 1.9em;
+}
+.company, .dates {
+  font-weight: 100;
+}
+.dates {
+  color: #B6B6B6;
 }
