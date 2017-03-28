@@ -65,3 +65,10 @@ p {
 .dates {
   color: #B6B6B6;
 }
+
+@media (max-width: 767px) {
+  .dates {
+    display: block;
+    margin-top: 5px;
+  }
+}
