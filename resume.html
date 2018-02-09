@@ -15,15 +15,32 @@
   <body>  
     <nav class="container__nav">
       <ul class="container-width">
-        <li><a href="index.html">HELLO</a></li>
-        <li><a href="resume.html">RESUME</a></li>
+        <li class="home-link"><a href="index.html">HELLO</a></li>
+        <li class="resume-link"><a href="resume.html">RESUME</a></li>
       </ul>
     </nav>
+
+    <header class="container__resume-header">
+      <div class="container-width">
+        <div class="container__resume-header-content">
+            <img src="images/myface.jpg"/>
+            <div class="container__resume-header-title">
+              <h1>Valerie Seer</h1>
+              <h2>Web Developer</h2>
+              <ul>
+                <li><i class="fa fa-map-marker"></i>Chicago, IL</li>
+                <li><i class="fa fa-envelope"></i><a href="mailto:seervalerie@gmail.com">seervalerie@gmail.com</a></li>
+                <li><i class="fa fa-phone"></i><a href="tel:9547564701">(954) 756-4701</a></li>
+              </ul>
+            </div>
+        </div>
+      </div>
+    </header>
 
     <section class="container__work container-width">
       <h2>Work</h2>
       <div class="container__work-item">
-        <h3>UI/UX Designer <span class="company">SIM Partners / </span><span class="dates">Chicago, IL / 2016 - Present</span></h3>
+        <h3>UI/UX Designer <span class="company">SIM Partners </span><span class="dates">/ Chicago, IL / 2016 - Present</span></h3>
         <ul>
           <li><i class="fa fa-chevron-right"></i>Wireframe and mockup data-driven pages, considering UX best practices and client KPI’s.</li>
           <li><i class="fa fa-chevron-right"></i>Develop and maintain pages using Mustache, XSL, Bootstrap, Less, JavaScript/jQuery, Gulp, Git, and Jenkins.</li>
@@ -32,6 +49,24 @@
           <li><i class="fa fa-chevron-right"></i>Work within an Agile Kanban environment to continuously meet client requests.</li>
         </ul>
       </div>
+      <div class="container__work-item">
+          <h3>Graphic Designer <span class="company">Freelance </span><span class="dates">/ Chicago, IL / 2015 - 2017</span></h3>
+          <ul>
+            <li><i class="fa fa-chevron-right"></i>Design solutions for small business marketing efforts not limited to: brochures, email banners, eBooks, infographics, and white papers.</li>
+            <li><i class="fa fa-chevron-right"></i>Provide WordPress template support, using HTML/CSS to edit template designs. </li>
+          </ul>
+        </div>
     </section>
+
+    <section class="container__personal-projects container-width">
+      <h2>Personal Projects</h2>
+      <div class="container__personal-projects-item">
+        <h3>NavBuddy</h3>
+      </div>
+    </section>
+
+    <!-- scripts -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+    <script src="js/index.js"></script>
   </body>
 </html>

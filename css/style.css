@@ -40,23 +40,26 @@ a:focus {
   margin: 0 auto;
 }
 
+
 /* Layout styles */
 .container__nav {
   padding: 15px 0;
 }
 .container__nav li {
   margin-right: 15px;
-  border-bottom: 2px solid #1939D6;
 }
 .container__nav li a {
   color: #1939D6;
   font-weight: 600;
   font-size: .8em;
 }
-.container__landing {
-  padding: 6em 0;
+.container__landing,
+.container__resume-header-content {
   display: flex;
   align-items: center;
+}
+.container__landing {
+  padding: 6em 0;
   justify-content: space-between;
   height: 350px;
 }
@@ -79,9 +82,37 @@ a:focus {
   text-align: center;
   font-style: italic;
 }
+.container__resume-header {
+  background-color: #1939D6;
+  padding: 40px 0 60px 0;
+  color: #fff;
+}
+.container__resume-header img {
+  width: 200px;
+  border-radius: 50%;
+  margin-right: 40px;
+}
+.container__resume-header-title ul {
+  margin-top: 10px;
+}
+.container__resume-header-title ul li {
+  margin-bottom: 3px;
+}
+.container__resume-header-title i {
+  width: 30px;
+  text-align: center;
+  font-size: .8em;
+}
+.container__work {
+  padding: 3em 0;
+}
+.container__work h2 {
+  text-transform: uppercase;
+}
 .container__work-item {
-    border-left: 3px solid #eee;
+    border-left: 3px solid #f3f3f3;
     padding-left: 20px;
+    margin-bottom: 40px;
 }
 .container__work-item li {
   margin-bottom: 10px;
@@ -92,7 +123,7 @@ a:focus {
   font-size: .8em;
 }
 .hover {
-  transition: color .3s;
+  transition: color .15s;
 }
 .tw-icon:hover {
   color: #1dcaff;
@@ -106,11 +137,12 @@ a:focus {
 .be-icon:hover {
   color: #1769ff;
 }
-.company, .dates {
+.company, 
+.dates {
   font-weight: 100;
 }
 .dates {
-  color: #5D7CD6;
+  color: #bfbfbf;
 }
 
 @media (max-width: 767px) {
