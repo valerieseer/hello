@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <meta name="title" content="Valerie Seer / UI/UX Designer & Developer">
+  <meta name="title" content="Valerie Seer / Web Developer">
   <meta name="description" content="Chicago-based designer and developer">
   <link rel="icon" href="favicon.ico" type="image" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -13,17 +13,20 @@
 </head>
 
 <body>
-  <div class="container">
-    <header class="h-container">
+  <nav class="container__nav">
+    <ul class="container-width">
+      <li><a href="index.html">HELLO</a></li>
+      <li><a href="resume.html">RESUME</a></li>
+    </ul>
+  </nav>
+
+  <section class="container__landing container-width">
+    <div class="container__landing-content">
       <h1>Valerie Seer</h1>
-      <h2> UI/UX Designer &amp; Developer</h2>
+      <h2>Web Developer based in <br> Chicago, Illinois.</h2>
       <p>I build websites and provide solutions to business problems.</p>
+      <p>Some helpful starter links:</p>
       <ul>
-        <li>
-          <a href="https://twitter.com/valerieseer" target="_blank">
-            <i class="fa fa-twitter tw-icon hover" aria-hidden="true"></i>
-          </a>
-        </li>
         <li>
           <a href="https://www.linkedin.com/in/valerieseer" target="_blank">
             <i class="fa fa-linkedin ld-icon hover" aria-hidden="true"></i>
@@ -35,17 +38,22 @@
           </a>
         </li>
         <li>
+          <a href="https://twitter.com/valerieseer" target="_blank">
+            <i class="fa fa-twitter tw-icon hover" aria-hidden="true"></i>
+          </a>
+        </li>
+        <li>
           <a href="https://www.behance.net/valerieseer" target="_blank">
             <i class="fa fa-behance be-icon hover" aria-hidden="true"></i>
           </a>
         </li>
       </ul>
-    </header>
-    <section class="w-container">
-      <h2>Work</h2>
-      <h3>UI/UX Designer <span class="company">SIM Partners / </span><span class="dates">2016 - Present / Chicago, IL</span></h3>
-    </section>
-  </div>
+    </div>
+    <div class="container__landing-img">
+      <img src="images/giphy.gif"/>
+      <p>Probably me right now.</p>
+    </div>
+  </section>
 
   <!-- scripts -->
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>

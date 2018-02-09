@@ -1,34 +1,98 @@
 body {
   margin: 0;
   font-family: 'Helvetica', sans-serif;
-  color: #868686;
+  color: #1939D6;
+  line-height: 1.4;
 }
-.container {
-  width: 73%;
-  margin: 0 auto;
-  padding: 6em 0;
+
+/* Resets */
+h1,
+h2,
+p {
+  margin: 0;
 }
-header {
-  padding: 3em 0;
-  height: 350px;
+h2,
+p {
+  font-weight: 100;
+}
+h1 {
+  font-size: 3em;
+}
+h2 {
+  font-size: 1.3em;
+  margin-bottom: 1em;
 }
 ul {
   padding: 0;
+  margin: 0;
 }
 ul li {
   list-style-type: none;
-  display: inline-block;
 }
 a,
 a:focus {
   color: inherit;
+  text-decoration: none;
 }
-.fa {
+
+.container-width {
+  width: 73%;
+  margin: 0 auto;
+}
+
+/* Layout styles */
+.container__nav {
+  padding: 15px 0;
+}
+.container__nav li {
+  margin-right: 15px;
+  border-bottom: 2px solid #1939D6;
+}
+.container__nav li a {
+  color: #1939D6;
+  font-weight: 600;
+  font-size: .8em;
+}
+.container__landing {
+  padding: 6em 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 350px;
+}
+.container__landing li,
+.container__nav li {
+  display: inline-block;
+}
+.container__landing i {
   font-size: 1.5em;
   padding-right: .8em;
 }
+.container__landing ul {
+  margin-top: 20px;
+}
+.container__landing-img img {
+  border-radius: 50%;
+}
+.container__landing-img p {
+  font-size: .7em;
+  text-align: center;
+  font-style: italic;
+}
+.container__work-item {
+    border-left: 3px solid #eee;
+    padding-left: 20px;
+}
+.container__work-item li {
+  margin-bottom: 10px;
+  font-weight: 100;
+}
+.container__work-item i {
+  margin-right: 10px;
+  font-size: .8em;
+}
 .hover {
-  transition: color .6s;
+  transition: color .3s;
 }
 .tw-icon:hover {
   color: #1dcaff;
@@ -42,28 +106,11 @@ a:focus {
 .be-icon:hover {
   color: #1769ff;
 }
-h1,
-h2,
-p {
-  margin: 0;
-  line-height: 1.3;
-  font-weight: 100;
-}
-h1 {
-  font-size: 2.1em;
-}
-h2 {
-  font-size: 1.3em;
-  margin-bottom: 1em;
-}
-p {
-  margin-bottom: 1.9em;
-}
 .company, .dates {
   font-weight: 100;
 }
 .dates {
-  color: #B6B6B6;
+  color: #5D7CD6;
 }
 
 @media (max-width: 767px) {
