@@ -81,10 +81,11 @@ a:focus {
   font-size: .7em;
   text-align: center;
   font-style: italic;
+  margin-top: 5px;
 }
 .container__resume-header {
   background-color: #1939D6;
-  padding: 40px 0 60px 0;
+  padding: 40px 0 70px 0;
   color: #fff;
 }
 .container__resume-header img {
