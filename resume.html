@@ -21,6 +21,7 @@
     </nav>
 
     <header class="container__resume-header">
+      <div class="container__resume-header-bg"></div>
       <div class="container-width">
         <div class="container__resume-header-content">
             <img src="images/myface.jpg"/>
@@ -37,36 +38,63 @@
       </div>
     </header>
 
-    <section class="container__work container-width">
-      <h2>Work</h2>
-      <div class="container__work-item">
-        <h3>UI/UX Designer &amp; Developer <span class="company">SIM Partners </span><span class="dates">/ Chicago, IL / 2016 - Present</span></h3>
-        <ul>
-          <li><i class="fa fa-chevron-right"></i>Wireframe and mockup data-driven pages, considering UX best practices and client KPI’s.</li>
-          <li><i class="fa fa-chevron-right"></i>Develop and maintain pages using Mustache, XSL, Bootstrap, Less, JavaScript/jQuery, Gulp, Git, and Jenkins.</li>
-          <li><i class="fa fa-chevron-right"></i>Ensure pages meet web accessibility standards.</li>
-          <li><i class="fa fa-chevron-right"></i>Implement cross-browser tests on pages during development.</li>
-          <li><i class="fa fa-chevron-right"></i>Work within an Agile Kanban environment to continuously meet client requests.</li>
-        </ul>
-      </div>
-      <div class="container__work-item">
-          <h3>Graphic Designer <span class="company">Freelance </span><span class="dates">/ Chicago, IL / 2015 - 2017</span></h3>
-          <ul>
-            <li><i class="fa fa-chevron-right"></i>Design solutions for small business marketing efforts not limited to: brochures, email banners, eBooks, infographics, and white papers.</li>
-            <li><i class="fa fa-chevron-right"></i>Provide WordPress template support, using HTML/CSS to edit template designs. </li>
-          </ul>
-        </div>
-    </section>
+    <main class="container__resume-main container-width">
+      <section class="container__resume-main-skills">
+          <h2>Skills</h2>
+          <div class="container__resume-skills-list">
+            <ul>
+              <h3>Technical</h3>
+              <li>JavaScript/jQuery, HTML5, CSS3, Bootstrap/LESS, Git, Node.js/npm, Mustache, XSLT/XML, JSON, Jenkins, JIRA, WCAG</li>
+            </ul>
+            <ul>
+              <h3>Software</h3>
+              <li>Photoshop</li>
+              <li>Illustrator</li>
+            </ul>
+            <ul>
+              <h3>Languages</h3>
+              <li>Spanish (written &amp; spoken)</li>
+            </ul>
+          </div>
+        </section>
+      <section class="container__resume-main-work">
+        <section class="container__work">
+          <h2>Work</h2>
+          <div class="container__work-item">
+            <h3>UI/UX Designer &amp; Developer <span class="company">SIM Partners </span><span class="dates">/ Chicago, IL / 2016 - Present</span></h3>
+            <p>Wireframe and mockup data-driven pages, considering UX best practices and client KPI’s. Develop, deploy, and maintain pages using Mustache, XSLT, Bootstrap, Less, JavaScript/jQuery, Gulp, Git, and Jenkins. Implement cross-browser tests on pages during development. Ensure pages meet web accessibility standards. Work within an Agile Kanban environment to continuously meet client requests through JIRA.</p>
+          </div>
+          <div class="container__work-item">
+              <h3>Graphic Designer <span class="company">Freelance </span><span class="dates">/ Chicago, IL / 2015 - 2017</span></h3>
+              <p>Design visual solutions for small business marketing efforts not limited to: brochures, email banners, eBooks, infographics, and white papers. Provide WordPress template support, using HTML/CSS to update template designs.</p>
+            </div>
+        </section>
 
-    <section class="container__personal-projects container-width">
-      <h2>Personal Projects</h2>
-      <div class="container__personal-projects-item">
-        <h3>NavBuddy</h3>
-      </div>
-    </section>
+        <section class="container__personal-projects">
+          <h2>Personal Projects</h2>
+          <div class="container__personal-projects-item">
+            <h3><a href="https://spark72018.github.io/travelBot/" target="_blank">NavBuddy</a></h3>
+            <p>A Slack command bot that returns directions and traffic information using the Google Maps API. Technologies used: Node.js, Mongo, Express, JavaScript.</p>
+          </div>
+        </section>
+  
+        <section class="container__education">
+          <h2>Education</h2>
+          <ul>
+            <li><p><strong>BA,</strong> Communication Studies &amp; English Literature / Northwestern University / 2012</p></li>
+            <li><p><strong>Certification,</strong> Digital Multimedia Design / Harold Washington College / 2016</p></li>
+          </ul>
+        </section>
+
+        <section>
+          <h2><strong>Latest hobbies</strong></h2>
+          <p>Calisthenics, reading Greek mythology, playing rec sports, <a href="https://www.youtube.com/watch?v=1Cs0qyG78qY&list=RD1Cs0qyG78qY&t=7194" target="_blank">listening to those chill-hop streams on YouTube with the anime in the background</a>.</p>
+        </section>
+      </section>    
+    </main>
 
     <!-- scripts -->
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="js/index.js"></script>
   </body>
 </html>
