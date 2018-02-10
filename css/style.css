@@ -173,9 +173,11 @@ body {
   font-weight: 400;
   color: #616060;
 }
-.container__work-item,
-.container__personal-projects-item {
+.container__resume-main-work section {
     margin-bottom: 30px;
+}
+.container__work-item {
+  margin-bottom: 15px;
 }
 .container__work-item i,
 .container__personal-projects-item i {
