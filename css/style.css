@@ -69,7 +69,8 @@ body {
   height: 350px;
 }
 .container__landing li,
-.container__nav li {
+.container__nav li,
+footer li {
   display: inline-block;
 }
 .container__landing i {
@@ -147,10 +148,13 @@ body {
 }
 .container__resume-main-skills {
   box-shadow: 5px 0 5px -5px #d2d1d1;
-  padding-right: 30px;
+  padding-right: 60px;
 }
 .container__resume-main-work {
-  padding-left: 30px;
+  padding-left: 60px;
+}
+.container__resume-main-work .fade-in {
+	opacity: 0;
 }
 .container__resume-main h2 {
   text-transform: uppercase;
@@ -174,10 +178,10 @@ body {
   color: #616060;
 }
 .container__resume-main-work section {
-    margin-bottom: 30px;
+    margin-bottom: 40px;
 }
 .container__work-item {
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 .container__work-item i,
 .container__personal-projects-item i {
@@ -191,10 +195,68 @@ body {
 .dates {
   color: #203080;
 }
+/* Footer */
+footer {
+  background-color: #1939D6;
+  text-align: center;
+}
+footer ul {
+  padding: 40px 0;
+}
+.copyright-section {
+  padding: 10px 0;
+  font-size: .8em;
+}
+footer li {
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+footer .fa {
+  font-size: 20px;
+}
+footer p {
+  color: #fff;
+}
+footer .copyright-section {
+  background-color: #3e3d3d;
+}
 
-@media (max-width: 767px) {
-  .dates {
+@media (max-width: 992px) {
+  .container__landing,
+  .container__resume-header-content,
+  .container__resume-main {
     display: block;
-    margin-top: 5px;
+  }
+  .container__resume-main-skills {
+    box-shadow: none;
+  }
+  .container__resume-main-skills,
+  .container__resume-main-work {
+    padding: 0;
+  }
+  .container__resume-main-work {
+    margin-top: 30px;
+  }
+  .container__resume-header-content {
+    text-align: center;
+  }
+  .container__resume-header img {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+  .container__landing-img {
+    text-align: center;
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 448px) {
+  h1 {
+    font-size: 2.5em;
   }
 }
