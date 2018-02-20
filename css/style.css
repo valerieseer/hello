@@ -2,6 +2,7 @@
 h1,
 h2,
 h3,
+h4,
 p {
   margin: 0;
 }
@@ -67,13 +68,17 @@ body {
   align-items: center;
 }
 .container__landing {
-  padding: 6em 0;
+  padding: 6em 0 12em 0;
   justify-content: space-between;
   height: 350px;
 }
+.container__landing li {
+  margin-right: 10px;
+  font-weight: 600;
+}
 .container__landing li,
 .container__nav li,
-footer li {
+.footer-links li {
   display: inline-block;
 }
 .container__landing i {
@@ -134,26 +139,18 @@ footer li {
   border-radius: 50%;
   margin-right: 40px;
 }
+.container__resume-header-title h1 {
+  line-height: 1;
+}
 .container__resume-header-title h2 {
-  margin-bottom: 5px;
-}
-.container__resume-header-title ul {
-  margin-top: 10px;
-}
-.container__resume-header-title ul li {
-  margin-bottom: 3px;
-}
-.container__resume-header-title i {
-  text-align: center;
-  font-size: .8em;
-  margin-right: 10px;
+  margin-bottom: 10px;
 }
 .container__resume-main {
   padding: 3em 0;
   display: flex;
 }
 .container__resume-main-skills {
-  box-shadow: 5px 0 5px -5px #d2d1d1;
+  box-shadow: 5px 0 2px -5px #d2d1d1;
   padding-right: 60px;
   width: 40%;
 }
@@ -171,7 +168,6 @@ footer li {
   text-transform: uppercase;
 }
 .container__resume-main h3 {
-  margin-bottom: 3px;
   font-weight: 400;
 }
 .container__resume-main li,
@@ -200,6 +196,12 @@ footer li {
   margin-right: 10px;
   font-size: .8em;
 }
+.container__work-item-title {
+  margin-bottom: 3px;
+}
+.container__work-item-title p {
+  font-weight: 600;
+}
 .company, 
 .dates {
   font-weight: 100;
@@ -217,33 +219,30 @@ footer li {
 }
 /* Footer */
 footer {
+  text-align: center;
+  font-weight: 100;
+  font-size: 13px;
+  padding: 15px 0;
+}
+.footer-links {
   background-color: #1939D6;
   text-align: center;
 }
-footer ul {
-  padding: 40px 0;
+.footer-links ul {
+  padding: 80px 0;
+}
+.footer-links li {
+  margin-right: 20px;
+}
+.footer-links li a {
+  color: #fff;
 }
 .copyright-section {
   padding: 10px 0;
   font-size: .9em;
 }
-footer li {
-  width: 50px;
-  height: 50px;
-  line-height: 55px;
-  text-align: center;
-  background-color: #fff;
-  border-radius: 50%;
-  margin-right: 10px;
-}
-footer .fa {
-  font-size: 18px;
-}
 footer p {
   color: #fff;
-}
-footer .copyright-section {
-  background-color: #3e3d3d;
 }
 
  /** Key frames for page animations **/
@@ -280,7 +279,7 @@ footer .copyright-section {
 
 /** Basic styles for an animated element */
 .slide_element {
-  animation-duration: .8s;
+  animation-duration: .5s;
   transition-timing-function: ease-in;
   animation-fill-mode: both;
 }
