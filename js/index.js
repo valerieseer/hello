@@ -17,6 +17,10 @@ $(document).ready(function() {
     // Add border under Hello link
     $('.container__nav .home-link').css({'border-bottom': '2px solid #1939D6'});
     $('footer').css({'background-color': '#fff', 'color': '#1939D6'});
+    
+    if ($(window).width() <= 768) {
+      $('footer').css({'margin-top': '130px'});
+    }
   } 
 
 });
