@@ -158,7 +158,17 @@ h1 {
 }
 .container__resume-header-title .pdf-link {
   display: inline-block;
-  margin-top: 10px;
+  margin-top: 20px;
+  background-color: #fff;
+  border-radius: 3px;
+  color: var(--primary-color);
+  padding: 7px 15px;
+  transition: all .3s;
+  border: 1px solid #fff;
+}
+.container__resume-header-title .pdf-link:hover {
+  background-color: var(--primary-color);
+  color: #fff;
 }
 .container__resume-main {
   padding: 3em 0;
