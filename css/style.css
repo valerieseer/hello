@@ -397,7 +397,9 @@ footer p {
   .container__landing,
   .container__resume-header-content,
   .container__resume-main,
-  .container__portfolio-tiles {
+  .container__portfolio-tiles,
+  .tile-content,
+  .tile:before {
     display: block;
   }
   .container__resume-main-skills {
@@ -427,7 +429,11 @@ footer p {
     margin-bottom: 15px;
   }
 }
-
+@media (max-width: 768px) {
+  .tile-content {
+    padding: 25px;
+  }
+}
 @media (max-width: 448px) {
   h1 {
     font-size: 2.5em;
