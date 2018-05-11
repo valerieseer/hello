@@ -1,19 +1,18 @@
 <!DOCTYPE html>
 <html lang="en-us">
   <head>
-  <title>Valerie Seer</title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <meta name="title" content="Valerie Seer / Web Developer">
-  <meta name="description" content="Chicago-based developer and UX designer">
-  <link rel="icon" href="favicon.ico" type="image" />
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="css/style.css">
+    <title>Valerie Seer</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="title" content="Valerie Seer / Web Developer">
+    <meta name="description" content="Chicago-based developer and UX designer">
+    <link rel="icon" href="favicon.ico" type="image" />
+    <link rel="stylesheet" href="css/style.css">
   </head>
 
   <body>  
-    <nav class="container__nav slide_element slide_element--fadein">
+    <nav class="animation_element animation_element--fadein">
       <ul class="container-width">
         <li class="home-link"><a href="index.html">HELLO</a></li>
         <li class="resume-link"><a href="resume.html">RESUME</a></li>
@@ -21,12 +20,12 @@
       </ul>
     </nav>
 
-    <header class="container__resume-header slide_element slide_element--fadein">
-      <div class="container__resume-header-bg"></div>
+    <header class="resume-header animation_element animation_element--fadein">
+      <div class="resume-header__bg"></div>
       <div class="container-width">
-        <div class="container__resume-header-content">
+        <div class="resume-header__content">
             <img src="images/myface.jpg"/>
-            <div class="container__resume-header-title">
+            <div class="resume-header__title">
               <h1>Valerie Seer</h1>
               <h2>Web Developer</h2>
               <ul>
@@ -38,53 +37,56 @@
       </div>
     </header>
 
-    <main class="container__resume-main container-width slide_element slide_element--fadein">
-      <section class="container__resume-main-skills">
-          <h2>Skills</h2>
-          <div class="container__resume-skills-list">
-            <ul>
-              <h3>Technical</h3>
-              <li>JavaScript, jQuery, React, HTML5, CSS3, Bootstrap, LESS, Git, Gulp, Node.js/npm, Express, Mustache.js, XSLT, WordPress, SquareSpace, WCAG 2.0</li>
-            </ul>
-            <ul>
-              <h3>Software</h3>
-              <li>Photoshop</li>
-              <li>Illustrator</li>
-            </ul>
-            <ul>
-              <h3>Other Languages</h3>
-              <li>Spanish (written &amp; spoken)</li>
-            </ul>
-          </div>
-        </section>
-      <section class="container__resume-main-work">
-        <section class="container__work">
-          <h2>Experience</h2>
-          <div class="container__work-item">
-            <div class="container__work-item-title">
-                <h3>UI/UX Designer &amp; Developer</h3>
-                <p><span class="company">SIM Partners, </span> <span class="dates">2016 - Present</span></p>
-            </div>
-            <p>Wireframe and mockup data-driven pages, considering UX best practices and client KPI’s. Develop and maintain pages. Work within an Agile Kanban environment to continuously meet client requests through JIRA.</p>
-          </div>
-          <div class="container__work-item">
-            <div class="container__work-item-title">
-              <h3>Graphic Designer</h3>
-              <p><span class="company">Freelance, </span> <span class="dates">2015 - 2017</span></p>
-            </div>
-            <p>Design visual solutions for small business marketing efforts not limited to: brochures, email banners, eBooks, infographics, and white papers. Customize WordPress themes as needed.</p>
-          </div>
-        </section>
+    <main class="resume-main container-width animation_element animation_element--fadein">
+      <div class="resume-main__left resume-main__skills">
+        <h2>Skills</h2>
+        <ul>
+          <h3>Technical</h3>
+          <li>JavaScript, jQuery, React, HTML5, CSS3, Bootstrap, LESS, Git, Gulp, Node.js/npm, Express, Mustache.js, XSLT, WordPress, SquareSpace, WCAG 2.0</li>
+        </ul>
+        <ul>
+          <h3>Software</h3>
+          <li>Photoshop</li>
+          <li>Illustrator</li>
+        </ul>
+        <ul>
+          <h3>Other Languages</h3>
+          <li>Spanish (written &amp; spoken)</li>
+        </ul>
+      </div>
 
-        <section class="container__personal-projects">
+      <div class="resume-main__right">
+        <div class="resume-main__work">
+          <h2>Experience</h2>
+          <ul>
+            <li>
+              <div class="resume-main__work-title">
+                <h3>UI/UX Developer</h3>
+                <p><span class="company">Reputation.com, </span> <span class="dates">2016 - Present</span></p>
+              </div>
+              <p>Develop and maintain business listing pages using JavaScript, Mustache.js, Bootstrap, Less, Gulp, Git, and Jenkins. Implement front-end JavaScript integrations. Maintain a library of reusable UI components. Work within an Agile Kanban environment to continuously meet client requests.</p>
+            </li>
+            <li>
+              <div class="resume-main__work-title">
+                <h3>Graphic Designer</h3>
+                <p><span class="company">Freelance, </span> <span class="dates">2015 - 2017</span></p>
+              </div>
+              <p>Design visual solutions for small business marketing efforts not limited to: brochures, email banners, eBooks, infographics, and white papers. Provide WordPress theme customization.</p>
+            </li>
+          </ul>
+        </div>
+
+        <div class="resume-main__personal-projects">
           <h2>Personal Projects</h2>
-          <div class="container__personal-projects-item">
-            <h3><a href="https://spark72018.github.io/travelBot/" target="_blank">NavBuddy</a></h3>
-            <p>A Slack command bot that returns directions and traffic information using the Google Maps API. Technologies: Node.js, Mongo, Express, JavaScript.</p>
-          </div>
-        </section>
+          <ul>
+            <li>
+              <h3><a href="https://spark72018.github.io/travelBot/" target="_blank">NavBuddy</a></h3>
+              <p>A Slack command bot that returns directions and traffic information using the Google Maps API. Technologies: Node.js, Mongo, Express, JavaScript.</p>
+            </li>
+          </ul>
+        </div>
   
-        <section class="container__education">
+        <div class="resume-main__education">
           <h2>Education</h2>
           <ul>
             <li>
@@ -96,40 +98,38 @@
               <p>Northwestern University,<span class="dates"> 2008 - 2012</span></p>
             </li>
           </ul>
-        </section>
-      </section>    
+        </div>
+      </div>    
     </main>
 
-    <section class="footer-links">
-      <section class="container-width">
-        <ul>
-          <li>
-            <a href="https://www.linkedin.com/in/valerieseer" target="_blank">
-              LinkedIn
-            </a>
-          </li>
-          <li>
-            <a href="https://github.com/valerieseer" target="_blank">
-              Github
-            </a>
-          </li>
-          <li>
-            <a href="https://www.behance.net/valerieseer" target="_blank">
-              Behance
-            </a>
-          </li>
-          <li>
-            <a href="https://twitter.com/valerieseer" target="_blank">
-              Twitter
-            </a>
-          </li>
-        </ul>
-      </section>
-    </section>
-
     <footer>
-      <section>&copy; <span class="copyright-date"></span> Valerie Seer</section>
+      <ul>
+        <li>
+          <a href="https://www.linkedin.com/in/valerieseer" target="_blank">
+            LinkedIn
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/valerieseer" target="_blank">
+            Github
+          </a>
+        </li>
+        <li>
+          <a href="https://www.behance.net/valerieseer" target="_blank">
+            Behance
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com/valerieseer" target="_blank">
+            Twitter
+          </a>
+        </li>
+      </ul>
+      <div>
+        <p>&copy; <span class="copyright-date"></span> Valerie Seer</p>
+      </div>
     </footer>
+
 
     <!-- scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
