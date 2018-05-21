@@ -39,7 +39,7 @@ a:focus {
 }
 
 /****** Helper classes ******/
-.container-width {
+.col {
   margin: 0 auto;
   width: 70%;
 }
