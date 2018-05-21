@@ -46,6 +46,19 @@ a:focus {
 .hover {
   transition: color .15s;
 }
+.bg--blue {
+  background-color: var(--primary-color);
+}
+.bg--blue a,
+.bg--blue p {
+  color: #fff;
+}
+.underlined--blue {
+  border-bottom: 2px solid var(--primary-color);
+}
+.underlined--white {
+  border-bottom: 2px solid #fff;
+}
 
 /****** Layout styles ******/
 body {
@@ -301,8 +314,7 @@ nav li a {
 
 /* Footer */
 footer {
-  background-color: var(--primary-color);
-  color: #fff;
+  color: var(--primary-color);
   font-weight: 100;
   font-size: 13px;
   padding: 50px 0;
@@ -318,9 +330,6 @@ footer ul li {
   text-transform: uppercase;
 }
 footer ul li a {
-  color: #fff;
-}
-footer p {
   color: #fff;
 }
 .footer__email-btn {
