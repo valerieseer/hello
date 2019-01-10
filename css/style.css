@@ -16,7 +16,7 @@ h1 {
   line-height: 1.2;
 }
 h2 {
-  font-size: 1.2em;
+  font-size: 1.3em;
 }
 h3 {
   font-size: 1.1em;
@@ -68,6 +68,18 @@ body {
   line-height: 1.5;
   margin: 0;
 }
+
+/* Footer sticks to bottom in homepage */
+.homepage-wrapper {
+  position: relative;
+  min-height: 100vh;
+}
+.homepage-wrapper footer {
+  position: absolute;
+  bottom: 30px;
+  width: 100%;
+}
+
 nav ul,
 .home,
 .home__content ul,
@@ -94,7 +106,6 @@ nav li a {
 .home {
   justify-content: space-between;
   margin-top: 8em;
-  margin-bottom: 8em;
 }
 .home li {
   font-weight: 600;
@@ -313,35 +324,40 @@ nav li a {
 }
 
 /* Footer */
-footer {
-  color: var(--primary-color);
-  font-weight: 100;
-  font-size: 13px;
-  padding: 50px 0;
-  text-align: center;
-}
-footer ul {
-  justify-content: center;
-  margin-bottom: 20px;
-}
-footer ul li {
-  font-weight: 500;
-  margin-right: 20px;
-  text-transform: uppercase;
-}
-footer ul li a {
-  color: #fff;
-}
-.footer__email-btn {
+.homepage-wrapper .footer__email-btn {
+  background-color: var(--primary-color);
   border: 1px solid var(--primary-color);
-  border-radius: 3px;
+  border-radius: 5px;
+  color: #fff;
   display: inline-block;
   padding: 10px 25px;
   margin-bottom: 15px;
   transition: all .2s;
 }
-.footer__email-btn:hover {
+.homepage-wrapper .footer__email-btn:hover {
   background-color: var(--primary-color);
+  color: #fff;
+}
+.homepage-wrapper footer,
+.resume-wrapper footer {
+  color: var(--primary-color);
+  font-weight: 100;
+  font-size: 13px;
+  text-align: center;
+}
+.resume-wrapper footer {
+  padding: 40px 0;
+}
+.resume-wrapper footer ul {
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.resume-wrapper footer ul li {
+  font-weight: 500;
+  margin-right: 20px;
+  text-transform: uppercase;
+}
+.resume-wrapper footer ul li a {
   color: #fff;
 }
 
@@ -413,6 +429,7 @@ footer ul li a {
   /* Home */
   .home {
     margin-bottom: 0;
+    margin-top: 40px;
   }
   .home__img {
     text-align: center;
@@ -452,6 +469,10 @@ footer ul li a {
 @media (max-width: 768px) {
   .tile-content {
     padding: 25px;
+  }
+  /* Footer */
+  .homepage-wrapper footer {
+    bottom: -130px;
   }
 }
 
