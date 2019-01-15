@@ -250,14 +250,10 @@ nav li a {
   margin-bottom: 3px;
 }
 .resume-main__work-title p {
-  font-weight: 600;
-}
-.company, 
-.dates {
-  font-weight: 100;
+  font-weight: 500;
 }
 .dates {
-  color: #203080;
+  color: #7c8ee2;
 }
 
 /* Portfolio */
