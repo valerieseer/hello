@@ -119,6 +119,23 @@ nav li a {
 .home .home__content p:nth-child(3) {
   margin-bottom: 20px;
 }
+.home .home__content .email {
+  background-color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  border-radius: 8px;
+  display: inline-block;
+  color: #fff;
+  display: inline-block;
+  padding: 10px;
+  margin: 15px 0;
+  text-align: center;
+  transition: all .2s;
+  width: 150px;
+}
+.home .home__content .email:hover {
+  background-color: #fff;
+  color: var(--primary-color);
+}
 .home .home__img img {
   border-radius: 50%;
 }
@@ -322,20 +339,6 @@ nav li a {
 }
 
 /* Footer */
-.homepage-wrapper .footer__email-btn {
-  background-color: var(--primary-color);
-  border: 1px solid var(--primary-color);
-  border-radius: 5px;
-  color: #fff;
-  display: inline-block;
-  padding: 10px 25px;
-  margin-bottom: 15px;
-  transition: all .2s;
-}
-.homepage-wrapper .footer__email-btn:hover {
-  background-color: var(--primary-color);
-  color: #fff;
-}
 .homepage-wrapper footer,
 .resume-wrapper footer {
   color: var(--primary-color);
