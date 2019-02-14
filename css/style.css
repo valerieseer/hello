@@ -1,9 +1,17 @@
 /****** Global variables ******/
 :root {
-  --primary-color: #1939D6;
+  --primary-color: #2f2e2e;
+  --secondary-color: #fd5a5a;
 }
 
 /****** Resets ******/
+body {
+  color: var(--primary-color);
+  font-family: "Garamond", serif;
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0;
+}
 h1,
 h2,
 h3,
@@ -13,11 +21,12 @@ p {
 }
 h1 {
   font-size: 3.2em;
+  font-weight: 400;
   line-height: 1.2;
 }
 h2 {
   font-size: 1.3em;
-  line-height: 1.5;
+  line-height: 1.2;
 }
 h3 {
   font-size: 1.1em;
@@ -44,121 +53,149 @@ a:focus {
   margin: 0 auto;
   width: 70%;
 }
-.hover {
-  transition: color .15s;
-}
-.bg--blue {
+.bg {
   background-color: var(--primary-color);
 }
-.bg--blue a,
-.bg--blue p {
+.bg a,
+.bg p {
   color: #fff;
 }
-.underlined--blue {
-  border-bottom: 2px solid var(--primary-color);
+.underlined {
+  border-bottom: 2px solid var(--secondary-color);
 }
-.underlined--white {
-  border-bottom: 2px solid #fff;
+
+ /****** Key frames for page animations ******/
+ @keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translate3d(100%, 0, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/** Global styles for an animated element */
+.animation_element {
+  animation-duration: .5s;
+  animation-fill-mode: both;
+  transition-timing-function: ease-in;
+}
+
+/** Fades in */
+.animation_element--fadein {
+  animation-name: fadeIn;
+}
+
+/** Fades in and slides up */
+.animation_element--fadeinup {
+  animation-name: fadeInUp;
+}
+
+/** Fades in and slides from the right */
+.animation_element--fadeinright {
+  animation-name: fadeInRight;
 }
 
 /****** Layout styles ******/
-body {
-  color: var(--primary-color);
-  font-family: 'Helvetica', sans-serif;
-  font-size: 15px;
-  line-height: 1.5;
-  margin: 0;
-}
 
-/* Footer sticks to bottom in homepage */
-.homepage-wrapper {
+/** Styles to stick footer to bottom of homepage **/
+.home-container {
   position: relative;
   min-height: 100vh;
 }
-.homepage-wrapper footer {
+.home-container footer {
   position: absolute;
   bottom: 30px;
   width: 100%;
 }
 
+/** Set flex displays **/
 nav ul,
+footer ul,
 .home,
-.home__content ul,
-.resume-header__content,
-footer ul {
+.home .info ul,
+.resume .content {
   display: flex;
   align-items: center;
 }
 
-/* Nav */
+
+/*** Components ***/
+/** Nav **/
 nav {
   padding: 15px 0;
 }
-nav li {
+nav ul li {
   margin-right: 15px;
+  position: relative;
 }
-nav li a {
+/* nav ul li:after {
+  background-color: var(--secondary-color);
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  height: 3px;
+  visibility: hidden;
+  width: 100%;
+} */
+nav ul li a {
   color: var(--primary-color);
   font-weight: 600;
   font-size: .8em;
 }
 
-/* Home */
+/** Home **/
 .home {
   justify-content: space-between;
   margin-top: 8em;
 }
-.home li {
+.home ul li {
   font-weight: 600;
   margin-right: 10px;
 }
-.home i {
-  font-size: 1.5em;
-  padding-right: .8em;
-}
-.home .home__content p:nth-child(3) {
+.home .info p:nth-child(3) {
   margin-bottom: 20px;
 }
-.home .home__content .email {
-  background-color: var(--primary-color);
-  border: 1px solid var(--primary-color);
-  border-radius: 8px;
+.home .info .email {
   display: inline-block;
-  color: #fff;
-  display: inline-block;
-  padding: 10px;
   margin: 15px 0;
-  text-align: center;
-  transition: all .2s;
-  width: 150px;
+  font-size: 18px;
+  font-style: italic;
 }
-.home .home__content .email:hover {
-  background-color: #fff;
-  color: var(--primary-color);
-}
-.home .home__img img {
+.home .img img {
   border-radius: 50%;
 }
-.home .home__img p {
-  font-size: .7em;
+.home .img p {
+  font-size: 14px;
   font-style: italic;
   margin-top: 5px;
   text-align: center;
 }
-.home .tw-icon:hover {
-  color: #1dcaff;
-}
-.home .ld-icon:hover {
-  color: #0077b5;
-}
-.home .gh-icon:hover {
-  color: #000;
-}
-.home .be-icon:hover {
-  color: #1769ff;
-}
 
-/* Resume */
+/** Resume **/
 .resume-header {
   color: #fff;
   position: relative;
@@ -182,19 +219,19 @@ nav li a {
   transform: skewY(-2deg);
   transform-origin: top left;
 }
-.resume-header__content {
+.resume-header .content {
   position: relative;
 }
-.resume-header__title h2 {
+.resume-header .title h2 {
   margin-bottom: 10px;
 }
-.resume-header__title ul li {
+.resume-header .title ul li {
   font-weight: 600;
 }
-.resume-header__title ul li i {
+.resume-header .title ul li i {
   margin-right: 10px;
 }
-.resume-header__title .pdf-link {
+.resume-header .title .pdf-link {
   background-color: #fff;
   border-radius: 3px;
   border: 1px solid #fff;
@@ -204,7 +241,7 @@ nav li a {
   padding: 7px 15px;
   transition: all .3s;
 }
-.resume-header__title .pdf-link:hover {
+.resume-header .title .pdf-link:hover {
   background-color: var(--primary-color);
   color: #fff;
 }
@@ -214,49 +251,45 @@ nav li a {
   margin-bottom: 3em;
 }
 .resume-main h2 {
-  font-weight: 600;
   margin-bottom: 5px;
   text-transform: uppercase;
 }
 .resume-main h3 {
+  font-size: 19px;
   font-weight: 400;
 }
 .resume-main ul {
   margin-bottom: 20px;
 }
-.resume-main__left {
+.resume-main ul li,
+.resume-main p {
+  font-weight: 100;
+}
+.resume-main .left {
   box-shadow: 5px 0 2px -5px #d2d1d1;
   padding-right: 60px;
   max-width: 40%;
 }
-.resume-main__right {
+.resume-main .right {
   padding-left: 60px;
 }
-.rresume-main__right .fade-in {
-	opacity: 0;
-}
-.resume-main__right li {
+.resume-main .right ul li {
   margin-bottom: 10px;
 }
-.resume-main li,
-.resume-main p {
-  font-weight: 100;
+.resume-main .right .section {
+  margin: 0 0 40px 0;
 }
-.resume-main li i {
-  margin-right: 10px;
-  font-size: .8em;
-}
-.resume-main__work-title {
+.resume-main .right .section .title {
   margin-bottom: 3px;
 }
-.resume-main__work-title p {
+.resume-main .right .section .title p {
   font-weight: 500;
 }
-.dates {
-  color: #7c8ee2;
+.resume-main .right .section .title .dates {
+  color: #7f7f7f;
 }
 
-/* Portfolio */
+/** Portfolio **/
 .portfolio {
   padding: 60px 0;
 }
@@ -334,122 +367,77 @@ nav li a {
   background-image: url("../images/fresh.png");
 }
 
-/* Footer */
-.homepage-wrapper footer,
-.resume-wrapper footer {
+/** Footer **/
+.home-container footer,
+.resume-container footer {
   color: var(--primary-color);
   font-weight: 100;
   font-size: 13px;
   text-align: center;
 }
-.resume-wrapper footer {
+.resume-container footer {
   padding: 40px 0;
 }
-.resume-wrapper footer ul {
+.resume-container footer ul {
   justify-content: center;
   margin-bottom: 20px;
 }
-.resume-wrapper footer ul li {
+.resume-container footer ul li {
   font-weight: 500;
   margin-right: 20px;
   text-transform: uppercase;
 }
-.resume-wrapper footer ul li a {
+.resume-container footer ul li a {
   color: #fff;
 }
 
- /****** Key frames for page animations ******/
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translate3d(0, 100%, 0);
-  }
-  100% {
-    opacity: 1;
-    transform: none;
-  }
-}
-
-@keyframes fadeInRight {
-  0% {
-    opacity: 0;
-    transform: translate3d(100%, 0, 0);
-  }
-  100% {
-    opacity: 1;
-    transform: none;
-  }
-}
-
-/****** Global styles for an animated element */
-.animation_element {
-  animation-duration: .5s;
-  animation-fill-mode: both;
-  transition-timing-function: ease-in;
-}
-
-/****** Fades in */
-.animation_element--fadein {
-  animation-name: fadeIn;
-}
-
-/****** Fades in and slides up */
-.animation_element--fadeinup {
-  animation-name: fadeInUp;
-}
-
-/****** Fades in and slides from the right */
-.animation_element--fadeinright {
-  animation-name: fadeInRight;
-}
-
-
 @media (max-width: 992px) {
+  h2 {
+    margin: 0 0 5px 0;
+  }
+
   .home,
-  .resume-header__content,
+  .home .content,
   .resume-main,
+  .resume .content,
   .portfolio__tiles,
   .tile-content,
   .tile:before {
-    display: block;
+    flex-direction: column;
   }
 
   /* Home */
   .home {
+    align-items: initial;
     margin-bottom: 0;
-    margin-top: 40px;
+    margin-top: 80px;
   }
-  .home__img {
+  .home .img {
     text-align: center;
     margin-top: 50px;
   }
 
   /* Resume */
-  .resume-header__content {
+  .resume-header .content,
+  .resume-main .content {
     text-align: center;
   }
-  .resume-header__content img {
+  .resume-header .content img {
+    margin: 0 auto 20px auto;
+  }
+  .resume-main .content img {
     margin-right: 0;
     margin-bottom: 15px;
   }
-  .resume-main__left {
+  .resume-main .left {
     box-shadow: none;
     max-width: 100%;
   }
-  .resume-main__left,
-  .resume-main__right {
+  .resume-main .left,
+  .resume-main .right {
     padding: 0;
   }
-  .resume-main__work {
+  .resume-main .right {
     margin-top: 30px;
   }
 
@@ -464,12 +452,11 @@ nav li a {
 }
 
 @media (max-width: 768px) {
+  .home .img {
+    display: none;
+  }
   .tile-content {
     padding: 25px;
-  }
-  /* Footer */
-  .homepage-wrapper footer {
-    bottom: -130px;
   }
 }
 
@@ -477,11 +464,7 @@ nav li a {
   h1 {
     font-size: 2.5em;
   }
-  .home__content ul {
-    align-items: initial;
-    flex-direction: column;
-  }
-  .home__img img {
+  .img img {
     width: 100%;
   }
 }

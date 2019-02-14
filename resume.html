@@ -18,24 +18,27 @@
     <meta name="title" content="Valerie Seer / Web Developer">
     <meta name="description" content="Chicago-based developer and UX designer">
     <link rel="icon" href="favicon.ico" type="image" />
+
+    <!-- Local CSS -->
     <link rel="stylesheet" href="css/style.css">
   </head>
 
   <body>  
-    <section class="resume-wrapper">
-      <nav class="animation_element animation_element--fadein">
+    <section class="resume resume-container animation_element animation_element--fadein">
+      <nav>
         <ul class="col">
           <li class="home-link"><a href="index.html">HELLO</a></li>
           <li class="resume-link"><a href="resume.html">RESUME</a></li>
+          <!-- <li class="resume-link"><a href="portfolio.html">PORTFOLIO</a></li> -->
         </ul>
       </nav>
 
-      <header class="resume-header animation_element animation_element--fadein">
+      <header class="resume-header">
         <div class="resume-header__bg"></div>
         <div class="col">
-          <div class="resume-header__content">
+          <div class="content">
               <img src="images/myface.jpg"/>
-              <div class="resume-header__title">
+              <div class="title">
                 <h1>Valerie Seer</h1>
                 <h2>Web Developer & UX Designer</h2>
                 <ul>
@@ -47,8 +50,8 @@
         </div>
       </header>
 
-      <main class="resume-main col animation_element animation_element--fadein">
-        <div class="resume-main__left resume-main__skills">
+      <main class="resume-main col">
+        <div class="left resume-main__skills">
           <h2>Skills</h2>
           <ul>
             <h3>Technical</h3>
@@ -56,8 +59,7 @@
           </ul>
           <ul>
             <h3>Software</h3>
-            <li>Photoshop</li>
-            <li>Illustrator</li>
+            <li>Photoshop, Illustrator</li>
           </ul>
           <ul>
             <h3>Other Languages</h3>
@@ -65,29 +67,27 @@
           </ul>
         </div>
 
-        <div class="resume-main__right">
-          <div class="resume-main__work">
+        <div class="right">
+          <div class="section">
             <h2>Experience</h2>
             <ul>
               <li>
-                <div class="resume-main__work-title">
-                  <h3>UI/UX Designer</h3>
-                  <p><span class="company">Reputation.com, </span> <span class="dates">2016 - Present</span></p>
+                <div class="title">
+                  <h3>UI/UX Designer, Reputation.com &#47; <span class="dates">2016 - Present</span></h3>
                 </div>
                 <p>Develop and maintain business listing web pages using web technologies not limited to: jQuery, Mustache.js, Bootstrap, Less, Gulp, Git, and Jenkins. Implement front-end JavaScript integrations. Maintain a library of reusable UI components. Work within an Agile Kanban environment to continuously meet client requests. </p>
               </li>
               <li>
-                <div class="resume-main__work-title">
-                  <h3>Graphic Designer</h3>
-                  <p><span class="company">Freelance, </span> <span class="dates">2015 - 2017</span></p>
+                <div class="title">
+                  <h3>Graphic Designer, Freelance &#47; <span class="dates">2015 - 2017</span></h3>
                 </div>
                 <p>Design visual solutions for small business marketing efforts not limited to: brochures, email banners, eBooks, infographics, and white papers. Provide WordPress theme customization.</p>
               </li>
             </ul>
           </div>
 
-          <div class="resume-main__personal-projects">
-            <h2>Personal Projects</h2>
+          <div class="section">
+            <h2>Projects</h2>
             <ul>
               <li>
                 <h3><a href="https://spark72018.github.io/travelBot/" target="_blank">NavBuddy</a></h3>
@@ -96,7 +96,7 @@
             </ul>
           </div>
     
-          <div class="resume-main__education">
+          <div class="section">
             <h2>Education</h2>
             <ul>
               <li>
@@ -125,10 +125,11 @@
             </a>
           </li>
         </ul>
-        <p>&copy; <span class="copyright-date"></span> Valerie Seer</p>
+        <p>&copy; <span class="year"></span> Valerie Seer</p>
       </footer>
     </section>
-    <!-- scripts -->
+
+    <!-- Local JS -->
     <script src="js/index.js"></script>
   </body>
 </html>
