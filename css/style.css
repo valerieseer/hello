@@ -20,16 +20,13 @@ p {
   margin: 0;
 }
 h1 {
-  font-size: 3.2em;
+  font-size: 52px;
   font-weight: 400;
   line-height: 1.2;
 }
 h2 {
-  font-size: 1.3em;
+  font-size: 22px;
   line-height: 1.2;
-}
-h3 {
-  font-size: 1.1em;
 }
 h2,
 p {
@@ -57,7 +54,8 @@ a:focus {
   background-color: var(--primary-color);
 }
 .bg a,
-.bg p {
+.bg p,
+.bg h2 {
   color: #fff;
 }
 .underlined {
@@ -121,11 +119,11 @@ a:focus {
 /****** Layout styles ******/
 
 /** Styles to stick footer to bottom of homepage **/
-.home-container {
+.container {
   position: relative;
   min-height: 100vh;
 }
-.home-container footer {
+.container footer {
   position: absolute;
   bottom: 30px;
   width: 100%;
@@ -135,8 +133,7 @@ a:focus {
 nav ul,
 footer ul,
 .home,
-.home .info ul,
-.resume .content {
+.home .info ul {
   display: flex;
   align-items: center;
 }
@@ -150,6 +147,9 @@ nav {
 nav ul li {
   margin-right: 15px;
   position: relative;
+}
+nav .link {
+  text-transform: uppercase;
 }
 /* nav ul li:after {
   background-color: var(--secondary-color);
@@ -195,98 +195,48 @@ nav ul li a {
   text-align: center;
 }
 
-/** Resume **/
-.resume-header {
-  color: #fff;
+/** about **/
+.about .ital {
+  font-style: italic;
+}
+.about .underline-3 {
+  border-bottom: 3px solid var(--secondary-color);
+}
+.about header {
   position: relative;
-  padding: 40px 0 70px 0;
+  padding: 40px 0 10px 0;
   overflow: hidden;
 }
-.resume-header img {
-  border-radius: 50%;
-  margin-right: 40px;
-  width: 200px;
-}
-.resume-header__bg {
-  background-color: var(--primary-color);
-  height: 100%;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  width: 100%;
-  transform: skewY(-2deg);
-  transform-origin: top left;
-}
-.resume-header .content {
+.about header .title {
   position: relative;
 }
-.resume-header .title h2 {
-  margin-bottom: 10px;
+.about main {
+  margin: 50px auto 70px auto;
 }
-.resume-header .title ul li {
-  font-weight: 600;
+.about main .content {
+  width: 60%;
 }
-.resume-header .title ul li i {
-  margin-right: 10px;
-}
-.resume-header .title .pdf-link {
-  background-color: #fff;
-  border-radius: 3px;
-  border: 1px solid #fff;
-  color: var(--primary-color);
-  display: inline-block;
-  margin-top: 20px;
-  padding: 7px 15px;
-  transition: all .3s;
-}
-.resume-header .title .pdf-link:hover {
-  background-color: var(--primary-color);
-  color: #fff;
-}
-.resume-main {
-  display: flex;
-  margin-top: 3em;
-  margin-bottom: 3em;
-}
-.resume-main h2 {
-  margin-bottom: 5px;
-  text-transform: uppercase;
-}
-.resume-main h3 {
-  font-size: 19px;
-  font-weight: 400;
-}
-.resume-main ul {
+.about main h2 {
   margin-bottom: 20px;
 }
-.resume-main ul li,
-.resume-main p {
+.about main section:nth-of-type(2) {
+  margin: 10px 0 0 0;
+}
+.about main section:nth-of-type(3) {
+  font-size: 13px;
+  font-style: italic;
+  margin: 30px 0 0 0;
+}
+.about main ul {
+  margin-bottom: 20px;
+  margin-inline-start: 20px;
+}
+.about main ul li {
+  list-style-type: initial;
+}
+.about main ul li,
+.about main p {
   font-weight: 100;
-}
-.resume-main .left {
-  box-shadow: 5px 0 2px -5px #d2d1d1;
-  padding-right: 60px;
-  max-width: 40%;
-}
-.resume-main .right {
-  padding-left: 60px;
-}
-.resume-main .right ul li {
-  margin-bottom: 10px;
-}
-.resume-main .right .section {
-  margin: 0 0 40px 0;
-}
-.resume-main .right .section .title {
-  margin-bottom: 3px;
-}
-.resume-main .right .section .title p {
-  font-weight: 500;
-}
-.resume-main .right .section .title .dates {
-  color: #7f7f7f;
 }
 
 /** Portfolio **/
@@ -368,26 +318,42 @@ nav ul li a {
 }
 
 /** Footer **/
-.home-container footer,
-.resume-container footer {
+.container footer,
+.about footer {
   color: var(--primary-color);
   font-weight: 100;
   font-size: 13px;
   text-align: center;
 }
-.resume-container footer {
-  padding: 40px 0;
+.about footer {
+  padding: 50px 0;
 }
-.resume-container footer ul {
+.about footer h2 {
+  font-size: 36px;
+  margin: 0 0 20px 0;
+}
+.about footer .email {
+  border: 2px solid #fff;
+  display: inline-block;
+  font-size: 16px;
+  margin: 0 0 20px 0;
+  padding: 10px 20px;
+  transition: all .1s ease-in;
+}
+.about footer .email:hover {
+  background-color: #fff;
+  color: var(--primary-color);
+}
+.about footer ul {
   justify-content: center;
   margin-bottom: 20px;
 }
-.resume-container footer ul li {
+.about footer ul li {
   font-weight: 500;
   margin-right: 20px;
   text-transform: uppercase;
 }
-.resume-container footer ul li a {
+.about footer ul li a {
   color: #fff;
 }
 
@@ -398,8 +364,6 @@ nav ul li a {
 
   .home,
   .home .content,
-  .resume-main,
-  .resume .content,
   .portfolio__tiles,
   .tile-content,
   .tile:before {
@@ -411,34 +375,6 @@ nav ul li a {
     align-items: initial;
     margin-bottom: 0;
     margin-top: 80px;
-  }
-  .home .img {
-    text-align: center;
-    margin-top: 50px;
-  }
-
-  /* Resume */
-  .resume-header .content,
-  .resume-main .content {
-    text-align: center;
-  }
-  .resume-header .content img {
-    margin: 0 auto 20px auto;
-  }
-  .resume-main .content img {
-    margin-right: 0;
-    margin-bottom: 15px;
-  }
-  .resume-main .left {
-    box-shadow: none;
-    max-width: 100%;
-  }
-  .resume-main .left,
-  .resume-main .right {
-    padding: 0;
-  }
-  .resume-main .right {
-    margin-top: 30px;
   }
 
   /* Portfolio */
@@ -454,6 +390,9 @@ nav ul li a {
 @media (max-width: 768px) {
   .home .img {
     display: none;
+  }
+  .about main .content {
+    width: 100%;
   }
   .tile-content {
     padding: 25px;
