@@ -215,7 +215,7 @@ nav ul li.underlined:after {
   position: relative;
 }
 .about main {
-  margin: 40px auto 70px auto;
+  margin: 40px auto 80px auto;
 }
 .about main h1 {
   margin: 0 0 40px 0;
@@ -255,84 +255,6 @@ nav ul li.underlined:after {
 .about main ul li,
 .about main p {
   font-weight: 100;
-}
-
-/** Portfolio **/
-.portfolio {
-  padding: 60px 0;
-}
-.portfolio__tiles {
-  display: grid;
-  grid-template-rows: repeat(2, 1fr);
-  grid-template-columns: repeat(3, 1fr);
-  grid-column-gap: 5px;
-  grid-row-gap: 5px;
-}
-.portfolio__tiles-item {
-  cursor: pointer;
-  box-shadow: 1px 0px 13px #e8e8e8;
-  overflow: hidden;
-}
-.portfolio__tiles-item:nth-child(2) {
-  grid-area: 1 / 2 / 2 / 4;
-}
-.portfolio__tiles-item:nth-child(3) {
-  grid-area: 2 / 3 / 3 / 1;
-}
-.portfolio__tiles-item:hover .tile {
-  transform: scale(1.1);
-}
-.portfolio__tiles-item:hover .tile-content {
-  display: block;
-} 
-.portfolio__tiles-item:hover .tile:before,
-.portfolio__tiles-item:focus .tile:before {
-  display: block;
-}
-.tile {
-  background-size: cover;
-  box-shadow: 1px 0px 13px #e8e8e8;
-  height: 250px;
-  transition: all .3s;
-  position: relative;
-}
-.tile-content {
-  color: #fff;
-  display: none;
-  padding: 90px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-}
-.tile-content h2 {
-  font-weight: 500;
-}
-.tile-content p {
-  font-size: 12px;
-}
-.tile:before {
-  content: "";
-  display: none;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: rgba(28, 214, 212, 0.9);
-  width: 100%;
-}
-.tile-1 {
-  background-image: url("../images/sim-health.png");
-}
-.tile-2 {
-  background-image: url("../images/navbuddy.png");
-}
-.tile-3 {
-  background-image: url("../images/donuts.png");
-}
-.tile-4 {
-  background-image: url("../images/fresh.png");
 }
 
 /** Footer **/
