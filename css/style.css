@@ -21,12 +21,11 @@ p {
 }
 h1 {
   font-size: 52px;
-  font-weight: 400;
   line-height: 1.2;
+  font-weight: 400;
 }
 h2 {
   font-size: 22px;
-  line-height: 1.2;
 }
 h2,
 p {
@@ -42,7 +41,9 @@ ul li {
 a,
 a:focus {
   color: inherit;
-  text-decoration: none;
+}
+a:focus {
+  outline: 1px solid var(--secondary-color);
 }
 
 /****** Helper classes ******/
@@ -72,28 +73,6 @@ a:focus {
   }
 }
 
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translate3d(0, 100%, 0);
-  }
-  100% {
-    opacity: 1;
-    transform: none;
-  }
-}
-
-@keyframes fadeInRight {
-  0% {
-    opacity: 0;
-    transform: translate3d(100%, 0, 0);
-  }
-  100% {
-    opacity: 1;
-    transform: none;
-  }
-}
-
 /** Global styles for an animated element */
 .animation_element {
   animation-duration: .5s;
@@ -104,16 +83,6 @@ a:focus {
 /** Fades in */
 .animation_element--fadein {
   animation-name: fadeIn;
-}
-
-/** Fades in and slides up */
-.animation_element--fadeinup {
-  animation-name: fadeInUp;
-}
-
-/** Fades in and slides from the right */
-.animation_element--fadeinright {
-  animation-name: fadeInRight;
 }
 
 /****** Layout styles ******/
@@ -138,11 +107,13 @@ footer ul,
   align-items: center;
 }
 
-
 /*** Components ***/
 /** Nav **/
 nav {
   padding: 15px 0;
+}
+nav a {
+  text-decoration: none;
 }
 nav ul li {
   margin-right: 15px;
@@ -199,7 +170,7 @@ nav ul li.underlined:after {
   text-align: center;
 }
 
-/** about **/
+/** About **/
 .about .ital {
   font-style: italic;
 }
@@ -215,13 +186,13 @@ nav ul li.underlined:after {
   position: relative;
 }
 .about main {
-  margin: 40px auto 80px auto;
+  margin: 40px auto;
 }
 .about main h1 {
   margin: 0 0 40px 0;
 }
 .about main h2 {
-  margin: 0 0 20px 0;
+  margin: 0 0 15px 0;
 }
 .about main .content {
   display: grid;
@@ -232,18 +203,8 @@ nav ul li.underlined:after {
   grid-column-start: 1;
   grid-column-end: 5;
 }
-.about main .content .right {
-  color: var(--secondary-color);
-  grid-column-start: 5;
-  grid-column-end: 7;
-}
-.about main .content .left div:nth-of-type(2) {
-  margin: 10px 0 0 0;
-}
-.about main .content .left div:nth-of-type(3) {
-  font-size: 13px;
-  font-style: italic;
-  margin: 30px 0 0 0;
+.about main .content .left .section {
+  margin: 0 0 30px 0;
 }
 .about main ul {
   margin: 10px 0 20px 0;
@@ -305,10 +266,7 @@ nav ul li.underlined:after {
   }
 
   .home,
-  .home .content,
-  .portfolio__tiles,
-  .tile-content,
-  .tile:before {
+  .home .content {
     flex-direction: column;
   }
 
