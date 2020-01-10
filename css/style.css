@@ -7,10 +7,11 @@
 /****** Resets ******/
 body {
   color: var(--primary-color);
-  font-family: "Garamond", serif;
+  font-family: Garamond, serif;
   font-size: 16px;
   line-height: 1.5;
   margin: 0;
+  -webkit-font-smoothing: antialiased;
 }
 h1,
 h2,
@@ -145,7 +146,7 @@ nav ul li.underlined:after {
 /** Home **/
 .home {
   justify-content: space-between;
-  margin-top: 6em;
+  margin-top: 7em;
 }
 .home ul li {
   font-weight: 600;
@@ -186,10 +187,10 @@ nav ul li.underlined:after {
   position: relative;
 }
 .about main {
-  margin: 30px auto 40px auto;
+  margin: 40px auto;
 }
 .about main h1 {
-  margin: 0 0 40px 0;
+  margin: 0 0 30px 0;
 }
 .about main h2 {
   margin: 0 0 15px 0;
