@@ -5,8 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <meta name="title" content="Valerie Seer / Web Developer">
-  <meta name="description" content="Chicago-based web developer and UX designer">
+  <meta name="title" content="Valerie Seer / UI/UX Designer">
+  <meta name="description" content="Chicago-based UI/UX designer">
   <link rel="icon" href="favicon.ico" type="image" />
 
   <!-- Local CSS -->
@@ -14,45 +14,49 @@
 </head>
 
 <body>
-  <section class="container">
-    <div>
-      <nav>
-          <ul class="col">
-            <li class="link home-link"><a href="index.html">Hello</a></li>
-            <li class="link about-link"><a href="about.html">About</a></li>
-          </ul>
-      </nav>
-      
-      <main class="home col animation_element animation_element--fadein">
-        <div class="info">
-          <h1>Valerie Seer</h1>
-          <h2>UI/UX Designer &amp; Developer in Chicago, Illinois.</h2>
-          <p>Catch me on:</p>
-          <ul>
-            <li>
-              <a href="https://www.linkedin.com/in/valerieseer" target="_blank">
-                LinkedIn
-              </a>
-            </li>
-            <li>
-              <a href="https://codepen.io/valerieseer/" target="_blank">
-                Codepen
-              </a>
-            </li>
-          </ul>
-          <a href="mailto:seervalerie@gmail.com" class="email">Or send me an email.</a>
-        </div>
-        <div class="img">
-          <img src="images/giphy.gif"/>
-          <p>Probably me right now.</p>
-        </div>
-      </main>
-    </div>
+  <div class="wrapper">
+    <nav>
+      <div class="container">
+        <ul>
+          <li class="link home-link"><a href="index.html">Hello</a></li>
+          <li class="link about-link"><a href="about.html">About</a></li>
+        </ul>
+      </div>  
+    </nav>
+
+    <main id="home" class="animate fade-in">
+      <div class="container">
+        <div class="col col-2">
+          <div class="info">
+            <h1>Valerie Seer</h1>
+            <h2>UI/UX Designer &amp; Developer in Chicago, Illinois.</h2>
+            <div class="group">
+              <p>Catch me on:</p>
+              <ul>
+                <li>
+                  <a href="https://www.linkedin.com/in/valerieseer" target="_blank">LinkedIn</a>
+                </li>
+                <li>
+                  <a href="https://codepen.io/valerieseer/" target="_blank">Codepen</a>
+                </li>
+              </ul>
+            </div>  
+            <div class="group">
+              <p>Wanna chat?</p>
+              <a href="mailto:seervalerie@gmail.com" class="email">Send me an email</a>
+            </div>  
+          </div>
+          <div class="img">
+            <img src="images/giphy.gif"/>
+          </div>
+        </div>  
+      </div>  
+    </main>
 
     <footer>
       <p>&copy; <span class="year"></span> Valerie Seer</p>
     </footer>
-  </section>
+  </div>
 
   <!-- Local JS -->
   <script src="js/index.js"></script>

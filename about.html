@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="title" content="Valerie Seer / Web Developer">
-    <meta name="description" content="Chicago-based developer and UX designer">
+    <meta name="title" content="Valerie Seer / UI/UX Designer">
+    <meta name="description" content="Chicago-based UI/UX designer">
     <link rel="icon" href="favicon.ico" type="image" />
 
     <!-- Local CSS -->
@@ -14,58 +14,47 @@
   </head>
 
   <body>  
-    <section class="about animation_element animation_element--fadein">
+    <div class="wrapper">
       <nav>
-        <ul class="col">
-          <li class="link home-link"><a href="index.html">Hello</a></li>
-          <li class="link about-link"><a href="about.html">About</a></li>
-        </ul>
+        <div class="container">
+          <ul>
+            <li class="link home-link"><a href="index.html">Hello</a></li>
+            <li class="link about-link"><a href="about.html">About</a></li>
+          </ul>
+        </div>  
       </nav>
-
-      <main class="col">
-        <h1>I build websites and write code.</h1>
-
-        <section class="content">
-          <div class="left">
-            <div class="section">
-              <p>I've worked with various clients large and small, with experience ranging from building pages from the ground up via HTML/CSS/JS, to setting up and customizing WordPress and Squarespace themes.</p>
-              <p>For more details into my technical experience, <em><a href="seer_resume.pdf" target="_blank" class="pdf-link"><i class="fa fa-file-pdf"></i>you may view and download my resume here</a></em>.</p>
-            </div>
-            <div class="section">
-              <h2>Selected works:</h2>
-              <h3>Freelance websites</h3>
+      
+      <main id="about" class="animate fade-in">
+        <section class="container">
+          <div class="group">
+            <h1>I build websites and write code.</h1>
+            <p>I've worked with various clients large and small, with experiences ranging from building pages from the ground up via HTML/CSS/JS, to setting up and customizing WordPress and Squarespace themes.</p>
+            <p>For a detailed look into my technical experience, <a href="seer_resume.pdf" target="_blank" class="pdf-link">you may view and download my resume here</a>.</p>
+          </div>
+          <div class="group">
+            <h2>Selected works</h2>
+            <div class="group freelance">
+              <h3>Freelance websites:</h3>
               <ul>
                 <li><a href="https://www.drbonniemason.com/" target="_blank">Dr. Bonnie Simpson Mason</a> - Squarespace configuration and theme customization.</li>
                 <li><a href="https://www.smarklabs.com/" target="_blank">SmarkLabs</a> - WordPress theme customization.</li>
               </ul>
-              <h3>Front-end apps</h3>
+            </div>
+            <div class="group">
+              <h3>Web apps:</h3>
               <ul>
-                <li><a href="https://codepen.io/valerieseer/pen/deLXWy">Pixel Art Maker</a></li>
-                <li><a href="https://codepen.io/valerieseer/pen/ebbevz">Memory Game</a></li>
+                <li><a href="https://codepen.io/valerieseer/full/deLXWy">Pixel Art Maker</a></li>
+                <li><a href="https://codepen.io/valerieseer/full/ebbevz">Memory Game</a></li>
               </ul>
             </div>
-          </div>
-        </section>          
+          </div>  
+        </section>       
       </main>
 
       <footer>
-        <h2>Contact me, stalk me.</h2>
-        <a href="mailto:seervalerie@gmail.com" class="email">Email</a>
-        <ul>
-          <li>
-            <a href="https://www.linkedin.com/in/valerieseer" target="_blank">
-              LinkedIn
-            </a>
-          </li>
-          <li>
-            <a href="https://codepen.io/valerieseer/" target="_blank">
-              Codepen
-            </a>
-          </li>
-        </ul>
         <p>&copy; <span class="year"></span> Valerie Seer</p>
       </footer>
-    </section>
+    </div>
 
     <!-- Local JS -->
     <script src="js/index.js"></script>
