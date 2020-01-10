@@ -109,11 +109,13 @@ a:focus {
   text-align: center;
   margin: 4em 0 1em 0;
   width: 100%;
+  /* Stick to bottom */ 
+  position: absolute;
+  bottom: 0;
 }
-@media (min-width: 992px) {
-  .wrapper footer {
-    bottom: 0;
-    position: absolute;
+@media (max-width: 768px) {
+  .wrapper footer.about {
+    position: initial;
   }
 }
 
@@ -182,13 +184,13 @@ main a {
     margin-bottom: 0;
     margin-top: 80px;
   }
+  #home .img {
+    display: none;
+  }
 }
 @media (max-width: 768px) {
   h1 {
     margin: 0 0 10px 0;
-  }
-  #home .img {
-    display: none;
   }
 }
 
