@@ -205,6 +205,9 @@ main a {
 #about {
   margin-top: 3.5em;
 }
+#about h1 {
+  margin: 0 0 5px 0;
+}
 #about .group {
   width: 75%;
 }
