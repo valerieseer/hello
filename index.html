@@ -3146,6 +3146,19 @@
       font-family: 'Font Awesome 5 Brands';
       font-weight: 400; 
     }
+    @font-face {
+      font-family: 'Font Awesome 5 Free';
+      font-style: normal;
+      font-weight: 900;
+      font-display: block;
+      src: url("fonts/fa-solid-900.eot");
+      src: url("fonts/fa-solid-900.eot?#iefix") format("embedded-opentype"), url("fonts/fa-solid-900.woff2") format("woff2"), url("fonts/fa-solid-900.woff") format("woff"), url("fonts/fa-solid-900.ttf") format("truetype"), url("fonts/fa-solid-900.svg#fontawesome") format("svg"); }
+
+    .fa,
+    .fas {
+      font-family: 'Font Awesome 5 Free';
+      font-weight: 900; 
+    }
 
     .fa,
     .fas,
@@ -3161,7 +3174,9 @@
       text-rendering: auto;
       line-height: 1; 
     }
-
+    .fa-map-pin:before {
+      content: "\f276"; 
+    }
     .fa-linkedin-in:before {
       content: "\f0e1"; 
     }
@@ -3215,7 +3230,6 @@
     /* Links */
     a {
       color: var(--cta-primary);
-      text-decoration: none;
     }
     a:hover,
     a:focus {
@@ -3227,8 +3241,17 @@
     }
 
     /* Buttons */
+    .btn {
+      font-weight: 700;
+    }
     .btn-primary-outline {
+      background: linear-gradient(to right, rgb(0, 0, 0) 50%, rgb(255, 255, 255) 50%) right bottom / 205% 100%;
       border: 2px solid #000;
+      transition: all 0.1s ease-out 0s;
+    }
+    .btn-primary-outline:hover {
+      color: #fff;
+      background-position: left bottom;
     }
   </style>
 
@@ -3239,7 +3262,7 @@
       margin: 10rem 0 0 0;
     }
     .flex-item {
-      margin: 0 15px;
+      margin: 15px;
     }
     .flex-item-300 {
       width: 300px;
@@ -3371,22 +3394,33 @@
       color: var(--grey);
       margin: 2rem 0 0 0;
     }
+    #about .location {
+      color: var(--grey);
+    }
+    #about .location .icon {
+      margin: 0 .75rem 0 0;
+    }
     @media (max-width: 768px) {
       #about .img {
         display: none;
       }
     }
 
-    /** Selected works **/
+    /** Selected work **/
 
     /** Connect **/
     #contact ul {
       list-style: none;
     }
-    #contact .fab {
+    #contact .icon {
       color: var(--grey);
       font-size: 18px;
       margin: 0 1rem 0 0;
+    }
+    @media (max-width: 768px) {
+      #contact .contact-form {
+        margin: 2rem 0 0 0;
+      }
     }
     /** Footer **/
     footer {
@@ -3412,7 +3446,7 @@
         <ul class="d-flex align-items-center list-inline">
           <li class="link"><a href="#home">Hello</a></li>
           <li class="link"><a href="#about">About</a></li>
-          <li class="link"><a href="#works">Works</a></li>
+          <li class="link"><a href="#work">work</a></li>
           <li class="link"><a href="#contact">Contact</a></li>
         </ul>
       </nav>
@@ -3420,12 +3454,14 @@
   </header>
 
   <main class="animate fade-in">
-    <section id="hero" class="container">
-      <div class="content d-flex align-items-center">
-        <div class="info">
-          <h1>Valerie Seer</h1>
-          <h2>Web Developer</h2>
-        </div>
+    <section id="hero">
+      <div class="container">
+        <div class="content d-flex align-items-center">
+          <div class="info">
+            <h1>Valerie Seer</h1>
+            <h2>Web Developer</h2>
+          </div>
+        </div>  
       </div>  
     </section>  
 
@@ -3434,6 +3470,7 @@
         <div class="row">
           <div class="col-md-7">
             <h2>Website design and development.</h2>
+            <p class="location"><i class="fas fa-map-pin icon"></i>Chicago, IL</p>
             <p>Tech savvy with equal parts UX and communication acumen, I'm a creative problem-solver and autodidact with a passion for creating exceptional digital products. 
             <p>A voracious reader by heart, I'm continuously keeping up with the latest web trends and best practices. </p>
             <a href="seer_resume.pdf" target="_blank" class="pdf-link">Download resume</a>
@@ -3457,38 +3494,37 @@
       </div>       
     </section>
 
-    <section id="works" class="section"> 
+    <section id="work" class="section"> 
       <div class="container">
         <div class="row">   
           <div class="col-md-12">
-            <h2>Selected works</h2>
-            <p>COMING SOON</p>
-            <!-- <div class="d-flex flex-wrap justify-content-center">
+            <h2>Selected work</h2>
+            <div class="d-flex flex-wrap justify-content-center">
               <div class="card flex-item flex-item-300">
-                <img src="" class="card-img-top" alt="">
+                <img src="images/us-bank.png" class="card-img-top" alt="">
                 <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <a href="#" class="btn btn-primary-outline">Go somewhere</a>
+                  <h5 class="card-title">US Bank MLO experience</h5>
+                  <p class="card-text">Website development and deployment of the entire US Bank MLO experience, from locators to profile pages.<br><br> Gulp.js, Git, Mustache.js, jQuery, Bootstrap, jQuery.</p>
+                  <a href="https://mortgage.usbank.com/" target="_blank" class="btn btn-primary-outline">View work</a>
                 </div>
               </div>
               <div class="card flex-item flex-item-300">
-                <img src="" class="card-img-top" alt="">
+                <img src="images/ati.png" class="card-img-top" alt="">
                 <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <a href="#" class="btn btn-primary-outline">Go somewhere</a>
+                  <h5 class="card-title">ATI locator experience</h5>
+                  <p class="card-text">Website development and deployment of the entire ATI locator experience, from locators to profile pages.<br><br> Gulp.js, Git, Mustache.js, jQuery, Bootstrap, jQuery.</p>
+                  <a href="https://www.atipt.com/locations" target="_blank" class="btn btn-primary-outline">View work</a>
                 </div>
               </div>
               <div class="card flex-item flex-item-300">
-                <img src="" class="card-img-top" alt="">
+                <img src="images/standard-health-provider" class="card-img-top" alt="">
                 <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <a href="#" class="btn btn-primary-outline">Go somewhere</a>
+                  <h5 class="card-title">Provider profile</h5>
+                  <p class="card-text">Website design, development and deployment of a standardized healthcare provider profile page template. <br><br> UX research/design, Mustache.js, Bootstrap, jQuery.</p>
+                  <a href="https://health.localsearchprofiles.com/simon-chau-chicago-cardiology" target="_blank" class="btn btn-primary-outline">View work</a>
                 </div>
               </div>
-            </div> -->
+            </div>
           </div>  
         </div> 
       </div>   
@@ -3497,20 +3533,24 @@
     <section id="contact" class="section">
       <div class="container">
         <div class="row">    
-          <div class="col-md-7">
+          <div class="col-md-6">
             <h2>Let's connect</h2>
+            <p>Relevant links:</p>
             <ul class="list-group list-group-horizontal">
               <li>
-                <a href="https://www.linkedin.com/in/valerieseer" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://www.linkedin.com/in/valerieseer" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in icon"></i></a>
               </li>
               <li>
-                <a href="https://codepen.io/valerieseer/" target="_blank" aria-label="CodePen"><i class="fab fa-codepen"></i></a>
+                <a href="https://codepen.io/valerieseer/" target="_blank" aria-label="CodePen"><i class="fab fa-codepen icon"></i></a>
               </li>
               <li>
                 <a href="mailto:seervalerie@gmail.com" class="email">Email</a>
               </li>
             </ul>
           </div>  
+          <div class="col-md-6">
+            <iframe class="contact-form" src="https://docs.google.com/forms/d/e/1FAIpQLSfbvu_G2VJ7E0bMMiCPOQbtcoRfnsQ0vUbJiQ9i044dKfwqFg/viewform?embedded=true" width="100%" height="750" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+          </div>
         </div>  
         <!-- <div>
           <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfbvu_G2VJ7E0bMMiCPOQbtcoRfnsQ0vUbJiQ9i044dKfwqFg/viewform?embedded=true" width="640" height="677" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>        
