@@ -95,7 +95,7 @@ a:focus {
 }
 
 /* || Components **/
-header {
+#header {
   height: 3.5rem;
   margin: 1.5rem 0 0 0;
   position: fixed;
@@ -103,20 +103,20 @@ header {
   width: 100%;
   z-index: 1;
 }
-header nav ul {
+#header nav ul {
   padding: 0;
 }
-header nav ul li {
+#header nav ul li {
   margin-right: 1.75rem;
   text-transform: uppercase;
   position: relative;
 }
-header nav ul li a {
+#header nav ul li a {
   color: var(--primary-color);
   font-size: .9rem;
   font-weight: 800;
 }
-header nav ul li a:before {
+#header nav ul li a:before {
   height: 0.1563rem;
   content: "";
   position: absolute;
@@ -125,14 +125,14 @@ header nav ul li a:before {
   bottom: -0.4rem;
   transition: all 200ms ease-out 0s;
 }
-header nav ul li a:hover {
+#header nav ul li a:hover {
   text-decoration: none;
 }
-header nav ul li a:hover::before {
+#header nav ul li a:hover::before {
   width: 100%;
 }
 @media (max-width: 576px) {
-  header nav ul li a {
+  #header nav ul li a {
     font-size: .7rem;
   } 
 }
@@ -214,15 +214,15 @@ main a {
     margin: 2rem 0 0 0;
   }
 }
-footer {
+#footer {
   color: #fff;
   background: rgb(0, 0, 0);
   font-weight: 800;
   margin: 7rem 0 0 0;
 }
-footer .content {
+#footer .content {
   height: 7.5rem;
 }
-footer p {
+#footer p {
   margin: auto 0;
 }
