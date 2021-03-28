@@ -1,0 +1,17 @@
+{
+  "Schema": "",
+  "HeaderMeta": "",
+  "OrganicInformation": {
+    "MetaTitle": "",
+    "MetaKeywords": ""
+  },
+  "PersonalInfo": {
+    "FirstName": "Valerie",
+    "LastName": "Seer",
+    "JobTitle": "Web UI Developer",
+    "Phone": {
+      "digits": "3124024030",
+      "text": "(312) 402-4030"
+    }
+  }
+}
