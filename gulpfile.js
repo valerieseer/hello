@@ -1,14 +1,15 @@
 const gulp = require('gulp'); // Gulp core package
-const sass = require('gulp-sass'); // Package to compile scss files
 const path = require('path'); // Gulp path package
+const sass = require('gulp-sass');
 const minify = require('gulp-minify');
 const imagemin = require('gulp-imagemin');
 const data = require('gulp-data');
 const hb = require('gulp-hb');
 const rename = require('gulp-rename');
 
-const srcPath = 'src/'; // Path to our source files
-const distPath = 'dist/'; // Path to your distribution files
+const srcPath = 'src/'; // Path to source files
+const distPath = 'dist/'; // Path to distribution files
+
 
 gulp.task('templates', function() {
   return gulp.src(srcPath + 'index.hbs')
