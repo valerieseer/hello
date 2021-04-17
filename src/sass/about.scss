@@ -1,0 +1,27 @@
+#about {
+  margin-top: 3.5rem;
+}
+#about .img {
+  text-align: right;
+}
+#about .img img {
+  border-radius: 50%;
+}
+#about h3 {
+  font-weight: 100;
+}
+#about .about-site {
+  color: var(--grey);
+  margin: 2rem 0 0 0;
+}
+#about .location {
+  color: var(--grey);
+}
+#about .location .icon {
+  margin: 0 .75rem 0 0;
+}
+@media (max-width: 768px) {
+  #about .img {
+    display: none;
+  }
+}

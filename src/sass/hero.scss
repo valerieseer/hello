@@ -1,0 +1,35 @@
+#hero {
+  margin-top: 7em;
+}
+#hero .content {
+  height: 60vh;
+  margin: auto 0;
+}
+#hero h1,
+#hero h2 {
+  line-height: 1.1;
+}  
+#hero h1 {
+  color: #929292;
+  font-size: 4.5rem;
+  font-weight: 900;
+}
+#hero h2 {
+  font-size: 3rem;
+  font-weight: 900;
+}
+
+@media (max-width: 992px) {
+  #hero {
+    margin-top: 5em;
+  }
+}
+@media (max-width: 768px) {
+  #hero h1 {
+    font-size: 2.9rem;
+    
+  }
+  #hero h2 {
+    font-size: 2.25rem;
+  }
+}

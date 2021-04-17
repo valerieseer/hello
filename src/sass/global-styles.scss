@@ -1,0 +1,93 @@
+/* || Global styles */
+:root {
+  --cta-primary: #0a5694;
+  --cta-active: #000;
+  --body-color: #000;
+  --grey: #757575;
+  --body-size: 1rem;
+}
+
+/* Typography */
+p {
+  margin: 0 0 1rem 0;
+}
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+h1 {
+  font-size: 1.625rem;
+}
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+h3 {
+  font-size: 1.25rem;
+}
+h4 {
+  font-size: 1.125rem;
+}
+
+/* Links */
+a {
+  color: var(--cta-primary);
+}
+a:hover,
+a:focus {
+  color: var(--cta-active);
+}
+a:focus {
+  outline: 2px solid var(--cta-primary);
+  outline-offset: 0.3rem;
+}
+
+
+/* Buttons */
+.btn {
+  font-weight: 700;
+}
+.btn-primary-outline {
+  background: linear-gradient(to right, rgb(0, 0, 0) 50%, rgb(255, 255, 255) 50%) right bottom / 205% 100%;
+  border: 2px solid #000;
+  transition: all 0.1s ease-out 0s;
+}
+.btn-primary-outline:hover {
+  color: #fff;
+  background-position: left bottom;
+}
+
+body {
+  color: var(--body-color);
+  font-size: var(--body-size);
+  line-height: 1.6;
+  font-weight: 500;
+  -webkit-font-smoothing: antialiased;
+}
+
+
+/* ||  Utilities */
+.mt-10 {
+  margin-top: 10rem;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.animate {
+  animation-duration: .5s;
+  animation-fill-mode: both;
+  transition-timing-function: ease-in;
+}
+.fade-in {
+  animation-name: fadeIn;
+}
+
+main a {
+  font-weight: 600;
+}
