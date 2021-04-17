@@ -1,41 +1,54 @@
 const gulp = require('gulp'); // Gulp core package
 const path = require('path'); // Gulp path package
+const fs = require('fs');
+const handlebars = require('gulp-compile-handlebars');
+const rename = require('gulp-rename');
+const data = require('gulp-data');
 const sass = require('gulp-sass');
 const minify = require('gulp-minify');
 const imagemin = require('gulp-imagemin');
-const data = require('gulp-data');
-const hb = require('gulp-hb');
-const rename = require('gulp-rename');
 
 const srcPath = 'src/'; // Path to source files
 const distPath = 'dist/'; // Path to distribution files
 
 
-gulp.task('templates', function() {
-  return gulp.src(srcPath + 'index.hbs')
-    .pipe(hb().data(srcPath + 'data/test.json'))
+gulp.task('template', function() {
+  const srcFile = srcPath + 'index.hbs';
+  const jsonFile = srcPath + 'data/test.json';
+  return gulp
+    .src(srcFile)
+    .pipe(data(function(file) {
+      return JSON.parse(fs.readFileSync(jsonFile));
+    }))
+    .pipe(handlebars())
     .pipe(rename('index.html'))
     .pipe(gulp.dest('dist'))
 });
 
 gulp.task('styles', () => {
-  return gulp.src(srcPath + 'sass/styles.scss')
+  const styleFile = srcPath + 'sass/styles.scss';
+  return gulp
+    .src(styleFile)
     .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
     .pipe(gulp.dest(distPath + 'css'))
 });
 
 gulp.task('scripts', function() {
-  return gulp.src(srcPath + 'js/scripts.js')
+  const jsFile = srcPath + 'js/scripts.js';
+  return gulp
+    .src(jsFile)
     .pipe(minify())
     .pipe(gulp.dest(distPath + 'js'))
 });
 
 gulp.task('images', () => {
-  return gulp.src(srcPath + 'images/*')
+  const imageFiles = srcPath + 'images/*';
+  return gulp
+    .src(imageFiles)
     .pipe(imagemin())
     .pipe(gulp.dest(distPath + 'images'))
 });
 
 
 // Default task is executed upon execution of gulp
-gulp.task('default', gulp.series(['templates', 'styles', 'scripts', 'images']));
+gulp.task('default', gulp.series(['template', 'styles', 'scripts', 'images']));
