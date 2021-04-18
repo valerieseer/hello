@@ -5,6 +5,7 @@ const handlebars = require('gulp-compile-handlebars');
 const rename = require('gulp-rename');
 const data = require('gulp-data');
 const sass = require('gulp-sass');
+const autoprefixer = require('gulp-autoprefixer');
 const minify = require('gulp-minify');
 const imagemin = require('gulp-imagemin');
 
@@ -27,9 +28,13 @@ gulp.task('template', function() {
 
 gulp.task('styles', () => {
   const styleFile = srcPath + 'sass/styles.scss';
+  const autoprefixerOptions = {
+    browsers: ['last 2 versions', '> 5%', 'Firefox ESR']
+  };
   return gulp
     .src(styleFile)
     .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+    .pipe(autoprefixer(autoprefixerOptions))
     .pipe(gulp.dest(distPath + 'css'))
 });
 

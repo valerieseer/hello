@@ -1,4 +1,5 @@
 $(document).ready(function () {
+  // Utility function
   function animateTo(div, dfix, mfix) {
     const $htmlBody = $("html, body");
     if ($(window).width() > 768) {
@@ -12,6 +13,7 @@ $(document).ready(function () {
     } 
   }
 
+  // Header links click event
   (function() {
     const $headerLink = $("header .link a");
     $headerLink.each(function(i, el) {
@@ -21,4 +23,7 @@ $(document).ready(function () {
       })
     });	
   })();
+
+  // Init lazyload
+  lazyload();
 });
