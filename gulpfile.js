@@ -29,7 +29,7 @@ gulp.task('template', function() {
 gulp.task('styles', () => {
   const styleFile = srcPath + 'sass/styles.scss';
   const autoprefixerOptions = {
-    browsers: ['last 2 versions', '> 5%', 'Firefox ESR']
+    overrideBrowserslist: ['last 2 versions', '> 5%', 'Firefox ESR']
   };
   return gulp
     .src(styleFile)
