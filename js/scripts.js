@@ -13,10 +13,10 @@ $(document).ready(function () {
     } 
   }
 
-  // Header links click event
+  // Links click event
   (function() {
-    const $headerLink = $("header .link a");
-    $headerLink.each(function(i, el) {
+    const $link = $(".animate-to");
+    $link.each(function(i, el) {
       $(el).on("click", function() {
         var dest = $(this).attr("href");
         animateTo(dest, 120, 100);
